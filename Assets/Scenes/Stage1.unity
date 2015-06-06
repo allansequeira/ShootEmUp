@@ -250,6 +250,19 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!114 &590695042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 590695036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1971adcd2b5e24f11af6ca60cd6ba39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotPreFab: {fileID: 479764, guid: f21bd5222adfb498db47d232bc211b0b, type: 2}
+  shootingRate: .25
 --- !u!1001 &800639590
 Prefab:
   m_ObjectHideFlags: 0
