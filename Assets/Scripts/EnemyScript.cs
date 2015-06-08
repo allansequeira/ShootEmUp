@@ -7,23 +7,28 @@ using System.Collections;
 /// </summary>
 public class EnemyScript : MonoBehaviour {
 
-	private WeaponScript weapon;
+	private WeaponScript[] weapons;
 
 	void Awake() {
-		// Retrieve the weapon only once
-		weapon = GetComponent<WeaponScript> ();
+		Debug.Log ("In EnemyScript Awake");
+		// Retrieve the weapons only once
+		weapons = GetComponentsInChildren<WeaponScript> ();
 	}
 
 	// Use this for initialization
 	void Start () {
-	
+		Debug.Log ("In EnemyScript Start");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		// auto-fire
-		if (weapon != null && weapon.CanAttack) {
-			weapon.Attack(true);
+		Debug.Log ("In EnemyScript Update");
+
+		foreach (WeaponScript weapon in weapons) {
+			// auto-fire
+			if (weapon != null && weapon.CanAttack) {
+				weapon.Attack(true);
+			}
 		}
 	}
 }
