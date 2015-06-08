@@ -12,6 +12,9 @@ GameObject:
   - 61: {fileID: 6119948}
   - 50: {fileID: 5013766}
   - 114: {fileID: 11458708}
+  - 114: {fileID: 11428498}
+  - 114: {fileID: 11448302}
+  - 114: {fileID: 11451320}
   m_Layer: 0
   m_Name: Poulpi
   m_TagString: Untagged
@@ -26,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 151600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.65515137, y: -.739648402, z: 0}
+  m_LocalPosition: {x: 5.65515137, y: -4.3964839, z: 0}
   m_LocalScale: {x: .400000006, y: .400000006, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -59,6 +62,43 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
+--- !u!114 &11428498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1971adcd2b5e24f11af6ca60cd6ba39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotPreFab: {fileID: 489494, guid: 25604c3c6ab7243fc95328145a5b339c, type: 2}
+  shootingRate: 1.75
+--- !u!114 &11448302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80da8d4d12c8c4a77ba502daad373167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11451320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236a184f07f1148eba6ceccff74bfedc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: {x: 10, y: 10}
+  direction: {x: -1, y: 0}
 --- !u!114 &11458708
 MonoBehaviour:
   m_ObjectHideFlags: 1
