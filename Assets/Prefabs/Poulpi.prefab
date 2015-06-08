@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 426134}
   - 114: {fileID: 11470808}
   m_Layer: 0
-  m_Name: WeaponObject
+  m_Name: WeaponObject2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,18 +37,34 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &194882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 482344}
+  - 114: {fileID: 11400996}
+  m_Layer: 0
+  m_Name: WeaponObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &426134
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145012}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: -1.62920685e-07}
+  m_LocalRotation: {x: 0, y: 0, z: .984807789, w: .173647985}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 468902}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &468902
 Transform:
   m_ObjectHideFlags: 1
@@ -59,8 +75,21 @@ Transform:
   m_LocalPosition: {x: 5.65515137, y: -4.3964839, z: 0}
   m_LocalScale: {x: .400000006, y: .400000006, z: 1}
   m_Children:
+  - {fileID: 482344}
   - {fileID: 426134}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &482344
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194882}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: -1.62920685e-07}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 468902}
   m_RootOrder: 0
 --- !u!50 &5013766
 Rigidbody2D:
@@ -90,6 +119,19 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
+--- !u!114 &11400996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1971adcd2b5e24f11af6ca60cd6ba39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotPreFab: {fileID: 489494, guid: 25604c3c6ab7243fc95328145a5b339c, type: 2}
+  shootingRate: .75
 --- !u!114 &11448302
 MonoBehaviour:
   m_ObjectHideFlags: 1
