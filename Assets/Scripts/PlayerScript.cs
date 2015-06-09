@@ -54,4 +54,34 @@ public class PlayerScript : MonoBehaviour {
 
 		rigidBodyComponent.velocity = movement;
 	}
+
+	/// <summary>
+	/// Handle collision between player and enemy.
+	/// Damage both player and enemy using the HealthScript component
+	/// </summary>
+	/// <param name="collision">Collision.</param>
+	void OnCollisionEnter2D(Collision2D collision) {
+		bool damagePlayer = false;
+
+		// collision with enemy
+		EnemyScript enemy = collision.gameObject.GetComponent<EnemyScript> ();
+		if (enemy != null) {
+			// kill the enemy
+			HealthScript enemyHealth = enemy.GetComponent<HealthScript>();
+			if (enemyHealth != null) {
+				enemyHealth.Damage(enemyHealth.hp);
+			}
+
+			// this is redundant since we could code "damaging the player" here
+			damagePlayer = true;
+		}
+
+		// damage the player
+		if (damagePlayer) {
+			HealthScript playerHealth = this.GetComponent<HealthScript>();
+			if (playerHealth != null) {
+				playerHealth.Damage(1);
+			}
+		}
+	}
 }
