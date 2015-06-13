@@ -453,6 +453,25 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 468902, guid: 942149e70e27746ea9ea9f387efd22a9, type: 2}
   m_PrefabInternal: {fileID: 1555465231}
+--- !u!1 &1549573753 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 195424, guid: a289e97d3b7c94207813679f73ab1549, type: 2}
+  m_PrefabInternal: {fileID: 1622257091}
+--- !u!114 &1549573754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1549573753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e49baacd0ffaf4939963d2e625566982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: {x: 1, y: 1}
+  direction: {x: 1, y: 0}
+  isLinkedToCamera: 1
+  isLooping: 0
 --- !u!1 &1551566877
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,11 +672,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 468902, guid: 942149e70e27746ea9ea9f387efd22a9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 30.1700001
+      value: 31.2900009
       objectReference: {fileID: 0}
     - target: {fileID: 468902, guid: 942149e70e27746ea9ea9f387efd22a9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.55999994
+      value: 1.50999999
       objectReference: {fileID: 0}
     - target: {fileID: 468902, guid: 942149e70e27746ea9ea9f387efd22a9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -694,7 +713,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1823616064}
-  - 114: {fileID: 1823616065}
   m_Layer: 0
   m_Name: 3 - Foreground
   m_TagString: Untagged
@@ -718,21 +736,6 @@ Transform:
   - {fileID: 531147538}
   m_Father: {fileID: 1620805992}
   m_RootOrder: 3
---- !u!114 &1823616065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1823616063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e49baacd0ffaf4939963d2e625566982, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: {x: 1, y: 1}
-  direction: {x: 1, y: 0}
-  isLinkedToCamera: 1
-  isLooping: 0
 --- !u!1 &1888458051
 GameObject:
   m_ObjectHideFlags: 0
