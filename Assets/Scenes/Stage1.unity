@@ -851,6 +851,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11491014, guid: a289e97d3b7c94207813679f73ab1549, type: 2}
+      propertyPath: hp
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a289e97d3b7c94207813679f73ab1549, type: 2}
   m_IsPrefabParent: 0
@@ -904,6 +908,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1823616064}
+  - 114: {fileID: 1823616065}
   m_Layer: 0
   m_Name: 3 - Foreground
   m_TagString: Untagged
@@ -927,6 +932,17 @@ Transform:
   - {fileID: 531147538}
   m_Father: {fileID: 1620805992}
   m_RootOrder: 3
+--- !u!114 &1823616065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1823616063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7a187a8d3654389a6cd42179f50a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1888458051
 GameObject:
   m_ObjectHideFlags: 0

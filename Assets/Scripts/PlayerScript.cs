@@ -102,4 +102,21 @@ public class PlayerScript : MonoBehaviour {
 			}
 		}
 	}
+
+	void onDestroy() {
+		// Game over
+		// Add the script to the parent because the current game object 
+		// is likely to be destroyed immediately
+
+		// Check that the player is dead, as we is also callled when closing Unity
+//		HealthScript playerHealth = this.GetComponent<HealthScript>();
+//		if (playerHealth != null && playerHealth.hp <= 0)
+//		{
+//			// Game Over.
+//			var gameOver = FindObjectOfType<GameOverScript>();
+//			gameOver.ShowButtons();
+//		}
+
+		transform.parent.gameObject.AddComponent<GameOverScript> ();
+	}
 }
