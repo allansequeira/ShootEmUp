@@ -14,10 +14,11 @@ public class PlayerScript : MonoBehaviour {
 	// 1 - Store the movement
 	private Vector2 movement;
 	private Rigidbody2D rigidBodyComponent;
-
+	
 	// Use this for initialization
 	void Start () {
 		Debug.Log ("In PlayerScript start");
+
 	}
 	
 	// Update is called once per frame
@@ -103,7 +104,7 @@ public class PlayerScript : MonoBehaviour {
 		}
 	}
 
-	void onDestroy() {
+	void OnDestroy() {
 		// Game over
 		// Add the script to the parent because the current game object 
 		// is likely to be destroyed immediately
@@ -117,6 +118,9 @@ public class PlayerScript : MonoBehaviour {
 //			gameOver.ShowButtons();
 //		}
 
+
 		transform.parent.gameObject.AddComponent<GameOverScript> ();
+		Debug.Log ("In PlayerScript OnDestroy...added GameOverScript component to show menus");
+
 	}
 }
