@@ -13,7 +13,7 @@ public class EnemyScript : MonoBehaviour {
 	private MoveScript moveScript;
 
 	void Awake() {
-		Debug.Log ("In EnemyScript Awake");
+//		Debug.Log ("In EnemyScript Awake");
 		// Retrieve the weapons only once
 		weapons = GetComponentsInChildren<WeaponScript> ();
 
@@ -23,7 +23,7 @@ public class EnemyScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log ("In EnemyScript Start");
+//		Debug.Log ("In EnemyScript Start");
 
 		hasSpawn = false;
 
@@ -40,7 +40,7 @@ public class EnemyScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log ("In EnemyScript Update");
+//		Debug.Log ("In EnemyScript Update");
 
 		// check if enemy has spawned
 		if (hasSpawn == false) {
