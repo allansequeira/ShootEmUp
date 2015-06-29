@@ -100,7 +100,6 @@ public class PlayerScript : MonoBehaviour {
 			HealthScript playerHealth = this.GetComponent<HealthScript>();
 			if (playerHealth != null) {
 				playerHealth.Damage(1);
-
 			}
 		}
 	}
