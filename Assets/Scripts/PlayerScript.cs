@@ -45,6 +45,9 @@ public class PlayerScript : MonoBehaviour {
 				weapon.Attack(false);
 				// player shot sound
 				SoundEffectsHelper.Instance.MakePlayerShotSound();
+
+				// TODO: Hacky logic to spawn enemies based on shots fired and where the player is on the scene
+				SpawnEnemyHelper.Instance.SpawnEnemy(playerPosition());
 			}
 		}
 
@@ -63,6 +66,29 @@ public class PlayerScript : MonoBehaviour {
 			transform.position.z
 			);
 		// --- keep player inside camera bounds ---
+
+	}
+
+	// TODO: Hacky approach to getting an enemy to spawn inside the viewport. 
+	// Need to spawning enemies and finding the viewport to a different place
+	/// <summary>
+	/// player position inside camera bounds.
+	/// </summary>
+	/// <returns>The position.</returns>
+	private Vector3 playerPosition() {
+		var dist = (transform.position - Camera.main.transform.position).z;
+		var leftBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).x;
+		var rightBorder = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, dist)).x;
+		var topBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).y;
+		var bottomBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 1, dist)).y;
+		
+		transform.position = new Vector3(
+			Mathf.Clamp(transform.position.x, leftBorder, rightBorder),
+			Mathf.Clamp(transform.position.y, topBorder, bottomBorder),
+			transform.position.z
+			);
+
+		return transform.position;
 	}
 
 	void FixedUpdate() {
