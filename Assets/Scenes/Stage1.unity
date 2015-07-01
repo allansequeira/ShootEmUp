@@ -678,6 +678,7 @@ GameObject:
   - 4: {fileID: 1551566878}
   - 114: {fileID: 1551566879}
   - 114: {fileID: 1551566880}
+  - 114: {fileID: 1551566881}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -724,6 +725,18 @@ MonoBehaviour:
   explosionSound: {fileID: 8300000, guid: 57bff80f96cca4eaba52dc026e167a7d, type: 3}
   playerShotSound: {fileID: 8300000, guid: a42ac43358a5e4484abb3874eb495858, type: 3}
   enemyShotSound: {fileID: 8300000, guid: 9d5f2bb0ea2d64226ace0b0b724d5c16, type: 3}
+--- !u!114 &1551566881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1551566877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9472fa669fc5e438dbc74aa8fba7e69b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPreFab: {fileID: 468902, guid: 942149e70e27746ea9ea9f387efd22a9, type: 2}
 --- !u!1 &1606244948
 GameObject:
   m_ObjectHideFlags: 0
