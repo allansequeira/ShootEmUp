@@ -12,8 +12,6 @@ public class SpawnEnemyHelper : MonoBehaviour {
 	/// </summary>
 	public static SpawnEnemyHelper Instance;
 
-	public float range = 4;
-
 	/// <summary>
 	/// Enemy prefab
 	/// </summary>
@@ -28,21 +26,22 @@ public class SpawnEnemyHelper : MonoBehaviour {
 		Instance = this;
 	}
 	
-	// TODO: Add randomness to x and y position when spawning enemies.
 	/// <summary>
 	/// Spawns the enemy at the given position
 	/// </summary>
 	/// <param name="position">Position.</param>
 	public void SpawnEnemy(Vector3 position) {
-		Vector3 pos = new Vector3(position.x + 20, position.y + 1, position.z);
-		Debug.Log ("Instantiating enemy at pos: " + pos);
-		instantiate (enemyPreFab, pos);
+		Debug.Log ("Instantiating enemy at pos: " + position);
+		instantiate (enemyPreFab, position);
 	}
 
+	/// <summary>
+	/// Spawns the enemy at a random position relative to the camera (position)
+	/// </summary>
 	public void SpawnEnemy() {
 		Vector3 cameraPos = Camera.main.transform.position;
 		Debug.Log ("Camera pos: " + cameraPos);
-		Vector3 pos = new Vector3 (cameraPos.x + 20, cameraPos.y + Random.Range(-5, 5), 0); 
+		Vector3 pos = new Vector3 (cameraPos.x + Random.Range(20, 30), cameraPos.y + Random.Range(-5, 5), 0); 
 		Debug.Log ("Instantiating enemy at pos: " + pos);
 		instantiate (enemyPreFab, pos);
 	}
@@ -70,6 +69,7 @@ public class SpawnEnemyHelper : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		// Invoke SpawnEnemy starting in 2 seconds and repeat every 2.5 seconds thereafter
 		InvokeRepeating ("SpawnEnemy", 2f, 2.5f);	
 	}
 	
