@@ -834,7 +834,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9472fa669fc5e438dbc74aa8fba7e69b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 4
   enemyPreFab: {fileID: 468902, guid: 942149e70e27746ea9ea9f387efd22a9, type: 2}
 --- !u!1 &1606244948
 GameObject:
@@ -954,14 +953,6 @@ Prefab:
     - target: {fileID: 438314, guid: a289e97d3b7c94207813679f73ab1549, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11406032, guid: a289e97d3b7c94207813679f73ab1549, type: 2}
-      propertyPath: enemyPreFab
-      value: 
-      objectReference: {fileID: 468902, guid: 942149e70e27746ea9ea9f387efd22a9, type: 2}
-    - target: {fileID: 11491014, guid: a289e97d3b7c94207813679f73ab1549, type: 2}
-      propertyPath: hp
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a289e97d3b7c94207813679f73ab1549, type: 2}
