@@ -11,7 +11,7 @@ Player incurs damage from enemy hits and health decreases on every hit. When hea
 Enemies spawn at random times and random (x,y) locations outside the camera view.
 Enemies move towards the player character while shooting at it.
 
-TODO:
+Next TODO:
 - Powerups
 - HUD - Health status bar, detailed damage indicator
 - Additional levels with increasing difficulty and maps
